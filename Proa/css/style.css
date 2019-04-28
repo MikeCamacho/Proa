@@ -1,0 +1,164 @@
+section{
+  max-height: 680px;
+  min-height: 680px;
+  height: 680px;
+  background: linear-gradient(119.56deg, #F26826 0%, #FDB823 100%);
+  width: 360px;
+  max-width: 360px;
+  margin: 0 auto 10px;
+}
+
+.loader{
+
+  overflow: hidden;
+  position: relative;
+}
+.cuadro1 {
+    background: linear-gradient(180deg, #FFAF54 0%, rgba(255, 255, 255, 0.67) 100%);
+    opacity: 0.25;
+    border-radius: 20px;
+    transform: rotate(154.52deg);
+    width: 361px;
+    height: 361px;
+    position: absolute;
+    top: -50px;
+    left: -170px;
+}
+.cuadro2 {
+  background: linear-gradient(180deg, #FFAF54 0%, rgba(255, 255, 255, 0.67) 100%);
+  opacity: 0.25;
+  border-radius: 20px;
+  transform: rotate(-144.77deg);
+  width: 361px;
+  height: 361px;
+  position: absolute;
+  top: 200px;
+  right: -240px;
+}
+.cuadro3{
+    background: linear-gradient(180deg, #FFAF54 0%, rgba(255, 255, 255, 0.67) 100%);
+    opacity: 0.15;
+    border-radius: 20px;
+    transform: rotate(-45deg);
+    width: 78px;
+    height: 78px;
+    position: absolute;
+    bottom: 20px;
+    left: -30px;
+}
+.cuadro4{
+  background: linear-gradient(180deg, #FFAF54 0%, rgba(255, 255, 255, 0.67) 100%);
+  opacity: 0.2;
+  border-radius: 20px;
+  transform: rotate(-119.2deg);
+  width: 161px;
+  height: 161px;
+  position: absolute;
+  bottom: -50px;
+  left: 110px;
+}
+.titulo-bienvenida {
+    width: 100%;
+    text-align: center;
+}
+.titulo-bienvenida h2{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;/* identical to box height */
+  text-align: center;
+  letter-spacing: 0.95px;
+  color: #FFFFFF;
+  opacity: 0.5;
+  text-shadow: 0px 4px 20px #EA8442;
+}
+.titulo-bienvenida p{
+  font-size: 13px;
+  line-height: 16px;/* identical to box height */
+  text-align: center;
+  letter-spacing: 0.95px;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 20px #EA8442;
+}
+.login {
+    width: 90%;
+    margin: 50px auto;
+}
+.login input {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px !important;
+    border-bottom: 3px solid #FADE87 !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+        padding-left: 50px !important;
+        background-position-x: 15px;
+        background-repeat: no-repeat;
+        background-position-y: center;
+}
+.login label{
+  font-size: 14px;
+line-height: 18px;/* identical to box height */
+color: #FFFFFF;
+}
+button{
+      background: #FFFFFf !important;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+      border-radius: 40px;
+      max-width: 100%;
+      min-width: 100% !important;
+      font-size: 14px !important;
+      line-height: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #3E505D !important;
+      font-weight: bold;
+
+}
+.login p{
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+  text-align: center;
+}
+.crear-cuenta {
+    background: #FFFFFF;
+    box-shadow: 0px -6px 150px rgba(220, 129, 65, 0.78);
+    text-align: center;
+    width: 100%;
+    padding: 10px 0 50px;
+    position: relative;
+    z-index: 2;
+    margin-top: -20px;
+}
+.crear-cuenta a{
+  font-size: 14px;
+line-height: 15px;
+text-align: center;
+letter-spacing: 1px;
+text-transform: uppercase;
+color: #FF8B70;
+border-bottom: 3px solid #FF8B70;
+padding-bottom: 10px;
+}
+.crear-cuenta:before {
+    content: "";
+    width: 734px;
+    height: 192px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: -30px;
+    z-index: -1;
+}
+.overflow{
+  overflow: hidden;
+}
+input[type=tel] {
+    background-image: url(../vector-phone.png);
+}
+input[type=password]{
+  background-image: url(../vector-llave.png);
+
+}
