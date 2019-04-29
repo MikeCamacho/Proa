@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="https://unpkg.com/inuit-css@latest">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Crear cuenta</title>
+    <style>
+       .modal-forget-password{
+         background: #FFFFFF;
+         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+         border-radius: 20px;
+         padding: 40px 30px;
+         position: relative;
+       }
+       .modal-forget-password h2{
+         font-size: 28px;
+         line-height: 35px;
+         text-align: center;
+         letter-spacing: 0.95px;
+         color: #3E505D;
+         max-width: 210px;
+         margin: auto;
+         font-weight: bold;
+       }
+       .modal-forget-password p{
+         font-size: 14px;
+         line-height: 18px;
+         color: #79828B;
+         text-align: left;         
+         margin: 20px 0;
+       }
+       .modal-forget-password label{
+         font-weight: bold;
+       }
+       .modal-forget-password input{
+         background: #FFF url(images/cellphone.svg) no-repeat 10px;
+         border: 1px solid #D8D8D8;
+         box-sizing: border-box;
+         border-radius: 5px;
+         position: relative;
+         min-width: 261px;
+         min-height: 40px;
+       }
+       .button-reset-password{
+          background: linear-gradient(190.01deg, #1DBEF5 0%, #1D9AF5 95.85%);
+          border-radius: 50px;
+          color: #fff;
+          font-size: 14px;
+          line-height: 15px;
+          letter-spacing: 1px;
+          text-align: center;
+          text-transform: uppercase;
+          min-width: 261px;
+          min-height: 46px;
+          margin: 25px auto 0;
+          display: block;
+       }
+       .cerrar-modal{
+         background: linear-gradient(201.71deg, #FFC83F -80.88%, #FF7C7C 197.59%);
+         border-radius: 50%;
+         width: 63px;
+         height: 63px;
+         position: absolute;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         top: -27px;
+         right: -15px;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="modal-forget-password">
+          <a href="#" class="cerrar-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0012 37.6866C29.3409 37.6866 37.7229 29.3048 37.7229 18.9649C37.7229 8.62509 29.3409 0.24324 19.0012 0.24324C8.66148 0.24324 0.27948 8.62509 0.27948 18.9649C0.27948 29.3048 8.66148 37.6866 19.0012 37.6866ZM9.56934 12.0154L16.519 18.9649L9.56934 25.9147L12.0515 28.3969L19.0012 21.4471L25.9508 28.3969L28.433 25.9147L21.4834 18.9649L28.433 12.0154L25.9508 9.53324L19.0012 16.483L12.0515 9.53324L9.56934 12.0154Z" fill="white"/>
+            </svg>
+          </a>
+          <h2>¿Olvidaste tu contraseña?</h2>
+          <p>Ingresa tu numero de celular para restaurar tu contraseña, te enviaremos las instrucciones para que puedas iniciar sesión nuevamente.</p>
+          <label for="reset-password">Numero de celular:</label>
+          <input type="tel" name="" value="" id="reset-password">
+          <button type="button" name="button" class="button-reset-password" >Restaurar contraseña</button>
+    </div>
+  </body>
+  </html>
