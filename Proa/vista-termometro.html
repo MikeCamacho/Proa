@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <title>Termometro</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+      }
+      section.thermometer {
+          background: linear-gradient(253.14deg, #1DBEF5 0%, #1D9AF5 95.85%);
+          overflow: hidden;
+          position: relative;
+          padding: 40px 30px;
+      }
+      section.thermometer:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          width: 950px;
+          left: 50%;
+          background: #fff;
+          height: 950px;
+          border-radius: 50%;
+          transform: translate(-50%, -68%);
+      }
+      .thermometer-percentage {
+          background: #fff;
+          border: 4px solid #FFFFFF;
+          box-sizing: border-box;
+          border-radius: 20px;
+          height: 488px;
+          width: 40px;
+          float: right;
+          position: relative;
+          z-index: 99;
+          margin-right: -10px;
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.09), 0px 4px 10px rgba(0, 0, 0, 0.12);
+          display: flex;
+          align-items: flex-end;
+          margin-top: 10px;
+      }
+      .relleno {
+          background: linear-gradient(185.96deg, #39CA14 16.58%, #34FF9E 100.07%);
+          height: 100%;
+          max-height: 100%;
+          width: 100%;
+          border-radius: 20px;
+      }
+      .relleno:before {
+          content: "";
+          background: linear-gradient(5.67deg, rgba(255, 255, 255, 0.7) -6.03%, rgba(255, 255, 255, 0) 53.13%);
+          opacity: 0.6;
+          height: 100%;
+          width: 85%;
+          position: absolute;
+          border-bottom-right-radius: 15px;
+          top: 0;
+          right: 0px;
+      }
+      .number-percentage {
+          background: #FFFFFF;
+          border: 1px solid #ECECEC;
+          box-sizing: border-box;
+          border-radius: 50%;
+          height: 60px;
+          width: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: -14px;
+          margin-top: -20px;
+          font-size: 24px;
+          line-height: 33px;
+          font-weight: 600;
+          color: #79828B;
+      }
+      .viability{
+        position: relative;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        width: 70%;
+        padding: 30px 20px 20px;
+      }
+      .title{
+        font-size: 19px !important;
+        font-weight: 700 !important;
+        line-height: 24px !important;
+        text-align: center;
+        letter-spacing: 0.95px;
+        color: #3E505D !important;
+      }
+      .button-percentage {
+          border-radius: 14px;
+          min-height: 64px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .button-percentage span {
+          font-size: 41px;
+          font-weight: bold;
+          line-height: 52px;
+          letter-spacing: -1px;
+          color: #FFFFFF;
+      }
+      .state-green{
+          background: linear-gradient(201.39deg, #39CA14 16.58%, #34FF9E 100.07%);
+      }
+      hr {
+          width: 102px;
+          height: 2px;
+          background: #3E505D;
+          margin: 20px auto;
+          border: none;
+      }
+      .plan-de-ahorro{
+          position: relative;
+          background: #FFFFFF;
+          box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+          border-radius: 10px;
+          padding: 45px 40px 45px 25px;
+          margin: 25px 10px 45px 0;
+      }
+      .plan-de-ahorro p{
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #79828B;
+      }
+      .plan-de-ahorro hr{
+        margin-bottom: 30px;
+      }
+      .money{
+        font-size: 36px !important;
+        font-weight: bold;
+        line-height: 55px !important;
+        text-align: center !important;
+        color: #79828B !important;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 30px 0;
+            padding: 0 10px;
+      }
+      .money span{
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 17px;
+        text-align: center;
+        color: #C7C8CA;
+      }
+      .tiempo{
+        background: #F9F9F9;
+        border: 1px solid #E3E3E3;
+        box-sizing: border-box;
+        border-radius: 5px;
+        width: 155px;
+        margin: 20px auto 0px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #A2A2A2;
+      }
+      .tiempo span{
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 55px;
+        text-align: center;
+        margin-right: 10px;
+      }
+      h2{
+        font-size: 28px;
+        line-height: 35px;
+        text-align: center;
+        letter-spacing: 0.95px;
+        font-weight: 600;
+        color: #FFFFFF;
+        margin: 0 0 45px;
+      }
+
+      .botones{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 46px;
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFF;
+        border: 2px solid #FFFFFF;
+        border-radius: 50px;
+        margin: 20px 0;
+        cursor: pointer;
+       }
+       .button-green{
+         background: linear-gradient(187.1deg, #35F98D -49.65%, #39CA15 82.46%);
+         margin-bottom: 50px;
+       }
+       .button-orange{
+         background: linear-gradient(183.42deg, #F3A42C -76.73%, #F88E25 130.3%);
+       }
+       .button-red{
+         background: linear-gradient(183.42deg, #F26826 -76.73%, #E60C0C 130.3%);
+       }
+       .deudas{
+         font-size: 16px;
+         line-height: 24px;
+         text-align: center;
+         color: #FFFFFF;
+         display: block;
+         margin: auto;
+       }
+       figure {
+          text-align: center;
+          margin: 60px 0 0;
+      }
+    </style>
+  </head>
+  <body>
+     <section class="thermometer">
+       <div class="thermometer-percentage">
+         <div class="relleno">
+              <div class="number-percentage">100</div>
+         </div>
+       </div>
+       <div class="viability">
+         <p class="title">Viabilidad de cumplir tu sueño</p>
+         <hr>
+         <div class="button-percentage state-green">
+           <span> 100% </span>
+         </div>
+       </div>
+
+       <div class="plan-de-ahorro">
+          <p class="title">Plan de ahorro</p>
+          <hr>
+          <p>Para conseguir el ahorro de este sueño debes ahorrar de la siguiente manera:</p>
+          <p class="money">2’000.000<span>mensuales</span></p>
+          <p>Durante</p>
+          <div class="tiempo">
+            <p><span>60</span>meses</p>
+          </div>
+       </div>
+
+       <h2>Selecciona la opción con la que te identificas:</h2>
+
+        <div class="botones button-green"> puedo hacerlo</div>
+        <span class="deudas">¿Tienes deudas pendientes?</span>
+        <div class="botones button-orange"> no estoy seguro</div>
+        <div class="botones button-red"> no creo poder lograrlo</div>
+
+        <figure>
+          <img src="images/logo-proa.png" alt="">
+        </figure>
+
+     </section>
+  </body>
