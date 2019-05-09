@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <title>Estamos Listos</title>
+
+  </head>
+  <style>
+  *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+    section{
+      background: linear-gradient(98.48deg, #F26826 0%, #FDB823 100%);
+      overflow: hidden;
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+            padding: 15px 20px;
+                margin-bottom: 20px;
+    }
+    .header p{
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: 0.95px;
+      color: #FFFFFF;
+          margin-left: -10px;
+    }
+    .menu {
+    background: #fff;
+    border-radius: 50%;
+    padding: 13px 13px;
+}
+    .menu span {
+      width: 20px;
+      height: 3px;
+      background: #f47427;
+      display: block;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+    .menu span:last-child{
+      margin-bottom: 0px;
+    }
+    .notificaciones {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .icono-campana{
+      background: #F26826;
+      width: 31px;
+      height: 31px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icono-campana svg {
+        margin-left: 5px;
+    }
+    .icono-perfil {
+    background: #F26826;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+span.conector {
+    margin: 4px -7px 0 -3px;
+}
+.container {
+    position: relative;
+    padding: 0 30px;
+}
+.container:before {
+    background: #fff;
+    content: "";
+    position: absolute;
+    width: 390%;
+    height: 770px;
+    top: 150px;
+    border-radius: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 0;
+}
+.container h2{
+  font-size: 28px;
+line-height: 35px;
+text-align: center;
+color: #FFFFFF;
+font-weight: 700;
+margin-bottom: 20px;
+}
+.edit {
+  display: flex;
+align-items: center;
+justify-content: center;
+background: #fff;
+width: 65px;
+height: 65px;
+flex-wrap: wrap;
+border-radius: 100%;
+text-align: center;
+margin-right: -20px;
+z-index: 1;
+}
+.edit svg{
+      margin-top: 3px;
+}
+.edit p{
+  font-size: 7px;
+      line-height: 8px;
+      align-items: center;
+      text-align: center;
+      color: #3E505D;
+      text-transform: uppercase;
+      width: 100%;
+      margin-top: -10px;
+}
+.thermometer-percentage {
+  background: #fff;
+  border: 4px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 20px;
+  height: 130px;
+  width: 40px;
+  position: relative;
+  z-index: 99;
+  margin-right: 0px;
+  margin-left: -15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.09), 0px 4px 10px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+.relleno {
+    background: linear-gradient(185.96deg, #39CA14 16.58%, #34FF9E 100.07%);
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+.relleno:before {
+    content: "";
+    background: linear-gradient(5.67deg, rgba(255, 255, 255, 0.7) -6.03%, rgba(255, 255, 255, 0) 53.13%);
+    opacity: 0.6;
+    height: 100%;
+    width: 85%;
+    position: absolute;
+    border-bottom-right-radius: 15px;
+    top: 0;
+    right: 0px;
+}
+.number-percentage {
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    box-sizing: border-box;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -14px;
+    margin-top: -20px;
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: 600;
+    color: #79828B;
+    flex-wrap: wrap;
+}
+.number-percentage span {
+    font-size: 7px;
+    line-height: 8px;
+    align-items: center;
+    text-align: center;
+    color: #3E505D;
+    text-transform: uppercase;
+    width: 100%;
+    margin-top: -20px;
+}
+.liquid-circle {
+    width: 153px;
+    height: 153px;
+    background: #D8FFE7;
+    border-radius: 100%;
+    border: 8px solid #fff;
+        overflow: hidden;
+        box-shadow: 0px 4px 60px #EFDBD1;
+}
+.liquid-circle svg{
+  margin-top: 20px;
+margin-left: -28px;
+}
+.contain-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+.detail-ahorro{
+  position: relative;
+}
+.ahorro-programado{
+  position: relative;
+}
+.ahorro-programado.ahorrado {
+    margin: 60px 0px 0px;
+}
+.detail-ahorro p{
+  font-size: 24px;
+line-height: 30px;
+text-align: center;
+letter-spacing: 0.95px;
+color: #3E505D;
+font-weight: bold;
+}
+
+.box-ahorro {
+    border-radius: 5px;
+    border: 1px solid #e1e1e1;
+    text-align: center;
+    margin: 30px 0;
+    padding: 5px 0 10px;
+}
+.box-ahorro p{
+  font-size: 31px;
+  line-height: 39px;
+  text-align: center;
+  letter-spacing: 0.95px;
+  color: #FF5418;
+  font-weight: bold;
+}
+.ahorrado .box-ahorro p{
+  color: #2FA611;
+}
+.box-ahorro span {
+    background: linear-gradient(176.77deg, #F26826 0%, #FDB823 204.91%);
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 5px 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    top: -15px;
+}
+.ahorrado .box-ahorro span{
+  background: linear-gradient(191.63deg, #39CA14 16.58%, #2FA611 100.07%);
+}
+.detail-ahorro .tiempo-ahorrado {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #79828B;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 0px;
+        margin-bottom: 60px;
+}
+.detail-ahorro .tiempo-ahorrado span{
+  font-weight: bold;
+}
+.slide-dream {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 20px 10px;
+    text-align: center;
+    margin-top: 30px;
+}
+.slide-dream img {
+    margin: 20px 0 10px;
+}
+.slide-dream p {
+    font-size: 18px;
+    line-height: 151.8%;
+    text-align: center;
+    color: #575757;
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+.slide-dream span {
+    display: block;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: #575757;
+    margin: 10px 0;
+}
+.link-edit {
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 25px 0;
+}
+.plan-de-ahorro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.plan-de-ahorro h3 {
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.95px;
+    color: #FFFFFF;
+    width: 100%;
+        margin-bottom: 35px;
+}
+.planes {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 7px 5px;
+    margin-bottom: 8px;
+    align-items: center;
+    margin-top: 15px;
+}
+.icon-check {
+    float: left;
+    margin-left: -17px;
+    margin-right: 10px;
+}
+.icon-check svg{
+  border: 3px solid #fff;
+  border-radius: 100%;
+  background: #fff;
+}
+.date-plan {
+    font-size: 10px;
+    line-height: 151.8%;
+    color: #979797;
+    font-weight: bold;
+}
+.value-plan {
+    font-size: 17px;
+    line-height: 151.8%;
+    color: #575757;
+    font-weight: bold;
+}
+.date-value-plan {
+    width: 70%;
+}
+.contador {
+    width: 20%;
+    border: 1px solid #E1E1E1;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+        padding: 10px 30px;
+            color: #575757;
+}
+.contador p:first-child {
+    font-size: 16px;
+}
+.contador p:last-child {
+    font-size: 13px;
+}
+.contador span {
+    font-size: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #E7E7E7;
+    margin: 0 5px;
+}
+.estado-pendiente-de-pago .contador {
+  padding: 10px 40px;
+}
+.estado-pendiente-de-pago .contador p:first-child {
+    font-size: 24px;
+}
+.estado-pendiente-de-pago .contador p:last-child {
+    font-size: 18px;
+}
+.estado-pago {
+    width: 70%;
+}
+.estado-pendiente-de-pago .date-plan {
+    font-size: 16px;
+}
+.estado-pendiente-de-pago .value-plan {
+    font-size: 24px;
+}
+.estado-proximo-de-pago {
+    width: 90%;
+    opacity: 0.4;
+}
+.estado-proximo-de-pago .date-plan {
+    font-size: 14px;
+}
+.estado-proximo-de-pago .value-plan {
+    font-size: 22px;
+}
+.estado-proximo-de-pago .contador p:first-child {
+    font-size: 22px;
+}
+.estado-proximo-de-pago .contador p:last-child {
+    font-size: 16px;
+}
+.alerta {
+    font-size: 10px;
+    line-height: 10px;
+    text-align: right;
+    color: #FFFFFF;
+}
+.ver-todo{
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  margin: 40px 0;
+}
+.botones-ahorro{
+  position: relative;
+  padding: 50px  0 0;
+  margin-bottom: 130px;
+}
+.botones-ahorro div {
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 50px;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+}
+.botones-ahorro div:first-child{
+  background: linear-gradient(187.1deg, #35F98D -49.65%, #39CA15 82.46%);
+}
+.botones-ahorro div:last-child{
+  background: linear-gradient(189.21deg, #1DBEF5 0%, #1D9AF5 95.85%);
+}
+.botones-ahorro:before {
+    content: "";
+    background: #fff;
+    width: 300%;
+    height: 250px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 0;
+}
+.medalleria div {
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.95px;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.medalleria div svg {
+    margin-left: 15px;
+}
+.medalleria div p {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: normal;
+    margin-top: 10px;
+    width: 100%;
+}
+.medalleria figure {
+    text-align: center;
+    margin-top: 30px;
+}
+.medalleria figure span {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 5px;
+}
+hr {
+    opacity: 0.5;
+    border: 1px solid #FFFFFF;
+    width: 70%;
+    margin: 30px auto 0;
+}
+img.logo {
+    margin: 20px auto;
+    display: block;
+}
+</style>
+  <body>
+    <section>
+      <div class="header">
+        <div class="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p>Detalle Sueño</p>
+        <div class="notificaciones">
+          <div class="icono-campana">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+              <path d="M10.7642 3.30209C9.42802 3.30209 8.34082 4.34399 8.34082 5.62451V6.32522H9.59429V5.62451C9.59429 5.00628 10.1193 4.50333 10.7642 4.50333C11.4093 4.50333 11.9343 5.00624 11.9343 5.62451V6.32522H13.1878V5.62451C13.1878 4.34399 12.1004 3.30209 10.7642 3.30209Z" fill="white" stroke="white" stroke-width="2"/>
+              <path d="M12.4775 17.9371C12.4775 18.8315 11.7183 19.559 10.7853 19.559H10.7435C9.81054 19.559 9.05132 18.8315 9.05132 17.9371H7.79785C7.79785 19.4939 9.11924 20.7603 10.7435 20.7603H10.7853C12.4096 20.7603 13.731 19.4939 13.731 17.9371H12.4775Z" fill="white" stroke="white"/>
+              <path d="M18.8746 17.7127L17.094 15.0582V11.6508C17.094 8.27268 14.2543 5.52441 10.764 5.52441C7.27345 5.52441 4.43391 8.27268 4.43391 11.6508V15.0582L2.65335 17.7125C2.52924 17.8973 2.52049 18.1324 2.63036 18.3252C2.74024 18.5179 2.95105 18.6381 3.18044 18.6381H18.3475C18.5769 18.6381 18.7877 18.5179 18.8974 18.3254C19.0074 18.1326 18.9987 17.8975 18.8746 17.7127ZM4.32837 17.4368L5.58771 15.5593C5.65268 15.4626 5.68737 15.3497 5.68737 15.2345V11.6508C5.68737 8.93517 7.96474 6.72569 10.764 6.72569C13.5634 6.72569 15.8406 8.9352 15.8406 11.6508V15.2345C15.8406 15.3497 15.875 15.4624 15.94 15.5593L17.1993 17.4368H4.32837Z" fill="white" stroke="white"/>
+            </svg>
+          </div>
+          <span class="conector"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="30" viewBox="0 0 26 30" fill="none">
+<path d="M25.2122 0.237183C16.4575 13.5755 4.44973 10.4027 0.0722656 5.77579V23.8133C3.71044 19.5206 16.1872 19.1949 25.2122 29.4291V0.237183Z" fill="#F26826"/>
+</svg></span>
+          <div class="icono-perfil">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M16.1994 0.422363C7.7178 0.422363 0.817383 7.3234 0.817383 15.805C0.817383 24.2866 7.7178 31.1877 16.1994 31.1877C24.6804 31.1877 31.5815 24.2866 31.5815 15.805C31.5815 7.3234 24.6817 0.422363 16.1994 0.422363ZM25.0689 24.2829C25.0689 23.9273 25.0689 23.6763 25.0689 23.6763C25.0689 21.5784 22.6451 20.8132 21.3476 20.258C20.878 20.0579 19.9926 19.6316 19.0843 19.1874C18.7776 19.0374 18.5012 18.6378 18.4665 18.2964L18.3661 17.3026C19.0613 16.6551 19.6877 15.7536 19.7937 14.7486H19.9504C20.197 14.7486 20.4294 14.564 20.4659 14.3378L20.7119 12.818C20.7448 12.4933 20.4381 12.2963 20.1896 12.2963C20.1964 12.264 20.202 12.2312 20.2051 12.2039C20.2367 12.0212 20.2559 11.8446 20.2683 11.673C20.2838 11.5348 20.2962 11.3917 20.303 11.2436C20.329 10.5261 20.2076 9.89843 20.0062 9.54712C19.8017 9.05579 19.4919 8.5787 19.0607 8.16977C17.8593 7.03219 16.4658 6.58918 15.2775 7.5037C14.4683 7.36367 13.5067 7.73357 12.8121 8.5471C12.4329 8.99135 12.1968 9.49942 12.0959 9.99943C12.0054 10.3111 11.9453 10.6884 11.9304 11.0967C11.9143 11.5509 11.9589 11.9666 12.0426 12.3031C11.8059 12.3179 11.5692 12.5125 11.5692 12.8192L11.8146 14.3391C11.8511 14.5652 12.0835 14.7499 12.3301 14.7499H12.4707C12.6938 15.8366 13.2712 16.7288 13.91 17.3509L13.8134 18.3119C13.7787 18.6527 13.5023 19.0511 13.195 19.2029C12.3164 19.6316 11.4509 20.0443 10.9329 20.258C9.71227 20.7612 7.21159 21.5784 7.21159 23.6763V24.151C5.17437 21.957 3.91783 19.0294 3.91783 15.8069C3.91783 9.03348 9.4285 3.52281 16.2019 3.52281C22.9759 3.52281 28.486 9.03348 28.486 15.8069C28.4835 19.0926 27.1792 22.0747 25.0689 24.2829Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+          <h2>Mi casa propia</h2>
+          <div class="contain-progress">
+            <div class="edit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37" fill="none">
+                <path d="M18.5 37C28.7173 37 37 28.7173 37 18.5C37 8.28273 28.7173 0 18.5 0C8.28273 0 0 8.28273 0 18.5C0 28.7173 8.28273 37 18.5 37Z" fill="#1DB3F5"/>
+                <path d="M18.4998 0C13.5514 0 9.061 1.94633 5.74121 5.11047V16.5862L18.4686 32.53C18.4813 32.5402 18.4998 32.5313 18.4998 32.5153C18.4998 32.5313 18.5183 32.5409 18.5311 32.53L31.2585 16.5862V5.11047C27.9387 1.94633 23.4483 0 18.4998 0Z" fill="#EBD6BD"/>
+                <path d="M18.5002 22.3276C16.1093 22.3276 13.9754 23.4248 12.5713 25.1421L18.469 32.53C18.4817 32.5402 18.5002 32.5313 18.5002 32.5153C18.5002 32.5313 18.5187 32.5409 18.5315 32.53L24.4291 25.1421C23.0251 23.4248 20.8912 22.3276 18.5002 22.3276Z" fill="#4C4C4C"/>
+                <path d="M18.5004 0C16.2574 0 14.1095 0.40381 12.1211 1.13552V11.4828L18.4691 16.5613C18.4819 16.5715 18.5004 16.562 18.5004 16.546C18.5004 16.562 18.5189 16.5715 18.5317 16.5613L24.8797 11.4828V1.13552C22.8913 0.40381 20.7434 0 18.5004 0Z" fill="#EBBA16"/>
+                <path d="M6.0168 16.3655L12.1205 11.4828V1.13552C9.72254 2.01842 7.55612 3.38104 5.74121 5.11047V16.2328C5.74121 16.3751 5.9058 16.4542 6.0168 16.3655Z" fill="#ED8A19"/>
+                <path d="M24.8789 11.4828L30.9826 16.3655C31.0936 16.4542 31.2582 16.3751 31.2582 16.2328V5.11047C29.4433 3.38104 27.2769 2.01842 24.8789 1.13552V11.4828Z" fill="#ED8A19"/>
+              </svg>
+              <p>Editar</p>
+            </div>
+            <div class="liquid-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="197" height="137" viewBox="0 0 197 137" fill="none">
+              <path d="M2.82641 45.2949C14.5877 28.0513 23.7201 7.79771 38.6457 4.02703C66.3457 -2.97085 92.5586 27.0246 119.78 22.2655C147.561 17.4087 145.64 -3.56177 178.713 0.524782C184.246 1.20848 191.462 13.5706 192.046 24.7024C193.764 57.4974 201.105 93.9089 193.871 123.557C191.334 133.955 134.873 130.092 134.405 130.121C81.4374 133.357 28.1738 166.276 0 52.6311" fill="url(#paint0_linear)"/>
+              <defs>
+              <linearGradient id="paint0_linear" x1="120.249" y1="-50.3823" x2="17.0562" y2="65.4141" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#1ACB66"/>
+              <stop offset="1" stop-color="#1DF568"/>
+              </linearGradient>
+              </defs>
+              </svg>
+            </div>
+            <div class="thermometer-percentage">
+              <div class="relleno">
+                   <div class="number-percentage">100 <span>viabilidad</span> </div>
+              </div>
+            </div>
+          </div>
+          <div class="detail-ahorro">
+            <div class="ahorro-programado">
+                <p>Ahorro programado</p>
+                <div class="box-ahorro">
+                    <span>Deseas ahorrar:</span>
+                    <p>$ 120.000.000</p>
+                </div>
+            </div>
+            <div class="ahorro-programado ahorrado">
+                <div class="box-ahorro">
+                    <span>Ahorrado:</span>
+                    <p>$ 725.000</p>
+                </div>
+            </div>
+            <p class="tiempo-ahorrado">Llevas ahorrado <span>1 MES</span> de 60 MESES</p>
+            <p>Detalles de este sueño</p>
+            <div class="slide-dream">
+              <p>Casa Propia - Sobre planos</p>
+              <img src="images/casa-propia.jpg" alt="">
+              <img src="images/casa-propia.jpg" alt="">
+              <span>3 Habitaciones, 2 baños, 52m2.</span>
+              <span>Finalizo mi ahorro el dia:</span>
+              <p>Enero 2024</p>
+            </div>
+          </div>
+          <a href="#" class="link-edit">Quiero editar mi sueño</a>
+          <div class="plan-de-ahorro">
+             <h3>Plan de Ahorro</h3>
+             <div class="planes estado-pago">
+               <div class="icon-check">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                  <path d="M24.5425 12.3771C24.5425 18.8817 19.127 24.1547 12.4465 24.1547C5.76611 24.1547 0.350586 18.8817 0.350586 12.3771C0.350586 5.87243 5.76611 0.599426 12.4465 0.599426C19.127 0.599426 24.5425 5.87243 24.5425 12.3771ZM11.0474 18.6132L20.0218 9.87498C20.3265 9.57826 20.3265 9.09713 20.0218 8.80041L18.9182 7.72584C18.6135 7.42908 18.1193 7.42908 17.8145 7.72584L10.4956 14.8522L7.07852 11.525C6.77378 11.2283 6.27965 11.2283 5.97486 11.525L4.87125 12.5996C4.56651 12.8963 4.56651 13.3774 4.87125 13.6742L9.94374 18.6132C10.2485 18.9099 10.7426 18.9099 11.0474 18.6132Z" fill="#2FA611"/>
+                  </svg>
+               </div>
+               <div class="date-value-plan">
+                 <div class="date-plan">Abril 30 - 2019</div>
+                 <div class="value-plan">$ 720.000</div>
+               </div>
+               <div class="contador"><p>1</p><span>/</span><p>60</p></div>
+             </div>
+             <span class="alerta">Reportaste tu ahorro con éxito</span>
+             <div class="planes estado-pendiente-de-pago">
+               <div class="icon-check">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                   <path d="M16.5 0C7.4019 0 0 7.4019 0 16.5C0 25.5981 7.4019 33 16.5 33C25.5981 33 33 25.5981 33 16.5C33 7.4019 25.5981 0 16.5 0ZM16.5 29.4891C9.33789 29.4891 3.51058 23.6625 3.51058 16.5C3.51058 9.33755 9.33789 3.51092 16.5 3.51092C23.6621 3.51092 29.4894 9.33755 29.4894 16.5C29.4894 23.6625 23.6621 29.4891 16.5 29.4891Z" fill="#FF5418"/>
+                   <path d="M25.0991 15.9905H17.684V7.07483C17.684 6.32455 17.0757 5.71625 16.3254 5.71625C15.5751 5.71625 14.9668 6.32455 14.9668 7.07483V17.3491C14.9668 18.0994 15.5751 18.7077 16.3254 18.7077H25.0991C25.8494 18.7077 26.4577 18.0994 26.4577 17.3491C26.4577 16.5988 25.8494 15.9905 25.0991 15.9905Z" fill="#FF5418"/>
+                </svg>
+               </div>
+               <div class="date-value-plan">
+                 <div class="date-plan">Mayo 30 - 2019</div>
+                 <div class="value-plan">$ 720.000</div>
+               </div>
+               <div class="contador"><p>2</p><span>/</span><p>60</p></div>
+             </div>
+             <span class="alerta">Ahorro actual que debes reportar</span>
+             <div class="planes estado-proximo-de-pago">
+               <div class="icon-check">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                   <path d="M16.5 0C7.4019 0 0 7.4019 0 16.5C0 25.5981 7.4019 33 16.5 33C25.5981 33 33 25.5981 33 16.5C33 7.4019 25.5981 0 16.5 0ZM16.5 29.4891C9.33789 29.4891 3.51058 23.6625 3.51058 16.5C3.51058 9.33755 9.33789 3.51092 16.5 3.51092C23.6621 3.51092 29.4894 9.33755 29.4894 16.5C29.4894 23.6625 23.6621 29.4891 16.5 29.4891Z" fill="#FF5418"/>
+                   <path d="M25.0991 15.9905H17.684V7.07483C17.684 6.32455 17.0757 5.71625 16.3254 5.71625C15.5751 5.71625 14.9668 6.32455 14.9668 7.07483V17.3491C14.9668 18.0994 15.5751 18.7077 16.3254 18.7077H25.0991C25.8494 18.7077 26.4577 18.0994 26.4577 17.3491C26.4577 16.5988 25.8494 15.9905 25.0991 15.9905Z" fill="#FF5418"/>
+                </svg>
+               </div>
+               <div class="date-value-plan">
+                 <div class="date-plan">Junio 30 - 2019</div>
+                 <div class="value-plan">$ 720.000</div>
+               </div>
+               <div class="contador"><p>3</p><span>/</span><p>60</p></div>
+             </div>
+             <span class="alerta">Próximo ahorro que debes realizar</span>
+             <a href="#" class="ver-todo">Ver todo el plan de ahorro <span>></span></a>
+          </div>
+          <div class="botones-ahorro">
+            <div>Reportar ahorro</div>
+            <div>Añadir ahorro sorpresa</div>
+          </div>
+          <div class="medalleria">
+            <div> Medalleria
+              <svg width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.2928 0.808035C6.73312 0.921452 -0.112491 7.8836 0.00140075 16.3579C0.115966 24.8284 7.14792 31.6075 15.7073 31.4947C24.2653 31.3806 31.1123 24.4185 30.9984 15.9449C30.8838 7.47363 23.8515 0.694952 15.2928 0.808035ZM15.247 25.4916L15.1614 25.4903C13.8432 25.4516 12.9139 24.4902 12.9513 23.2046C12.988 21.941 13.94 21.0236 15.2147 21.0236L15.2911 21.025C16.6461 21.0647 17.5649 22.0164 17.5269 23.339C17.4891 24.6063 16.552 25.4916 15.247 25.4916ZM20.7916 14.5972C20.4816 15.0332 19.8 15.5746 18.9411 16.2371L17.9952 16.8836C17.476 17.2832 17.1626 17.6592 17.045 18.0291C16.9523 18.3203 16.9069 18.3974 16.8988 18.9898L16.8974 19.1402H13.2859L13.2964 18.8377C13.3405 17.5941 13.3715 16.8626 13.8921 16.2581C14.7089 15.3087 16.5106 14.1602 16.5871 14.1115C16.8452 13.9191 17.0629 13.6999 17.2249 13.4657C17.604 12.9483 17.7718 12.541 17.7718 12.1407C17.7718 11.5853 17.6054 11.0716 17.2762 10.6143C16.9598 10.173 16.3586 9.94946 15.4893 9.94946C14.627 9.94946 14.0367 10.2203 13.6835 10.7761C13.3203 11.3475 13.1366 11.9476 13.1366 12.5607V12.7132H9.41294L9.41968 12.554C9.51571 10.296 10.3298 8.67018 11.8384 7.72148C12.7862 7.11736 13.9656 6.81114 15.3417 6.81114C17.1431 6.81114 18.6637 7.24446 19.861 8.09909C21.074 8.96506 21.6893 10.262 21.6893 11.9539C21.6893 12.9003 21.3874 13.7893 20.7916 14.5972Z" fill="white"/>
+              </svg>
+              <p>Medallas conseguidas en este sueño:</p>
+            </div>
+            <figure>
+              <img src="images/medalla.png" alt="">
+              <span>20 Pts</span>
+            </figure>
+          </div>
+          <hr>
+          <img src="images/logo-proa.png" alt="" class="logo">
+
+      </div>
+    </section>
+
+  </body>
+</html>
